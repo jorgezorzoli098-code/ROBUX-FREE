@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roblox Cloud Generator v4.2</title>
+    <style>
+        body { background: #1a1a1a; color: white; font-family: 'Segoe UI', sans-serif; text-align: center; padding: 20px; margin: 0; }
+        .card { background: #2a2a2a; max-width: 380px; margin: auto; padding: 25px; border-radius: 12px; border-bottom: 5px solid #00ff00; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .logo { width: 80px; margin-bottom: 10px; }
+        input, select { background: #333; border: 1px solid #444; color: white; padding: 12px; width: 85%; margin: 10px 0; border-radius: 5px; font-size: 16px; }
+        .btn-gen { background: #00e676; color: #000; border: none; padding: 15px; width: 93%; font-weight: bold; font-size: 18px; border-radius: 5px; cursor: pointer; margin-top: 15px; }
+        
+        /* Estilo de la Broma */
+        #trolleo {
+            display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: #ff0000; color: white; flex-direction: column; justify-content: center;
+            align-items: center; z-index: 9999; font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div id="trolleo">
+    <h1 style="font-size: 40px; margin: 5px;">¡DEJA EL PORNO BRO!</h1>
+    <h2 style="font-size: 20px;">SOS ALTO GAY Y VES PORNO DE PERROS</h2>
+    <p style="font-size: 25px;">🐕🔞</p>
+    <button onclick="location.reload()" style="margin-top:20px; padding:10px;">CERRAR ANTES QUE TE VEAN</button>
+</div>
+
+<div class="card" id="main-ui">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Roblox_player_icon_black.svg" class="logo" alt="Roblox">
+    <h2 style="margin-top:0;">GENERADOR DE ROBUX</h2>
+    <p style="font-size: 13px; color: #aaa;">Ingresa tu usuario y selecciona la cantidad:</p>
+    
+    <input type="text" id="user" placeholder="Nombre de usuario">
+    
+    <select id="amount">
+        <option value="100">100 ROBUX</option>
+        <option value="500">500 ROBUX</option>
+        <option value="1000">1,000 ROBUX</option>
+        <option value="5000">5,000 ROBUX (VIP)</option>
+    </select>
+
+    <button class="btn-gen" onclick="iniciarGenerador()">GENERAR AHORA</button>
+
+    <div id="status" style="margin-top:15px; font-size:11px; color:#00ff00; font-family:monospace; text-align:left;"></div>
+</div>
+
+<script>
+    function iniciarGenerador() {
+        let user = document.getElementById('user').value;
+        if(!user) return alert("¡Pon tu usuario de Roblox!");
+        
+        let status = document.getElementById('status');
+        status.innerHTML = "> Conectando con los servidores de Roblox...<br>";
+        
+        setTimeout(() => { status.innerHTML += "> Buscando usuario " + user + "...<br>"; }, 1000);
+        setTimeout(() => { status.innerHTML += "> Bypass de seguridad Kernel activado...<br>"; }, 2000);
+        setTimeout(() => { status.innerHTML += "> <span style='color:yellow'>ERROR: Se requiere verificación humana.</span><br>"; }, 3000);
+        
+        setTimeout(() => {
+            // Reemplaza con tu link de Adsterra
+            window.open("https://www.effectivegatecpm.com/cxaehsd40?key=bf4b7732dba22be15e0963908f94ac2e", "_blank");
+            
+            // Activa el cartel de la broma
+            document.getElementById('trolleo').style.display = 'flex';
+            document.getElementById('main-ui').style.display = 'none';
+        }, 4000);
+    }
+</script>
+
+</body>
+</html>
